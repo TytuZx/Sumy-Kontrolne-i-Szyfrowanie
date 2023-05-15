@@ -1,0 +1,1 @@
+# Sumy Kontrolne i Szyfrowanie
