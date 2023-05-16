@@ -14,12 +14,10 @@ bool xorek(std::string plikXorowany_str, std::string plikWyjsciowy_str, std::str
 
     if (plik != NULL && zaszyfrowany != NULL)
     {
-        //udane otwarcie pliku do zaszyfrowania i wyjsciowego
         int length = strlen(klucz);
         int znak, xorChar;
         int mod = 0;
 
-        //szyfrowanie XOR znak po znaku
         do
         {
             if (mod >= length)
@@ -31,7 +29,6 @@ bool xorek(std::string plikXorowany_str, std::string plikWyjsciowy_str, std::str
                 fputc(xorChar, zaszyfrowany);
         } while (znak != EOF);
 
-        //zapisywanie plikow (zamykanie)
         if (fclose(zaszyfrowany) == 0 && fclose(plik) == 0)
             return true;
         else
